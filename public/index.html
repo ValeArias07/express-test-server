@@ -12,10 +12,16 @@
 
   <script>
     function verImagen() {
+      const queryString = window.location.search;
       const imagenContainer = document.getElementById('imagenContainer');
       const image = document.createElement('img');
-      image.src = '/see-image/gardfield';
       imagenContainer.appendChild(image);
+      const urlParams = new URLSearchParams(queryString);
+      const nameParam = urlParams.get('name');
+      image.src = `/see-image/${nameParam}`;
+
+      // Hacer lo que necesites con los parámetros
+      console.log('Valor del parámetro 1:', nameParam);
     }
   </script>
 </body>
