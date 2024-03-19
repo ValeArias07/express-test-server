@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Server</title>
+</head>
+<body>
+  <h1>Express Images Server</h1>
+  <button onclick="verImagen()">Click to see image</button>
+  <div id="imagenContainer"></div>
+
+  <script>
+    function verImagen() {
+      const imagenContainer = document.getElementById('imagenContainer');
+      const image = document.createElement('img');
+      image.src = '/see-image/gard/?lan=esp';
+      imagenContainer.appendChild(image);
+    }
+  </script>
+</body>
+</html>

@@ -13,12 +13,12 @@ app.get('/', (req, res) => {
 });
 
 // Ruta para servir la imagen
-app.get('/ver-imagen/:name', (req, res) => {
+app.get('/see-image/:name', (req, res) => {
   const name = req.params.name; 
   res.sendFile(path.join(__dirname, 'public', `${name}.jpg`));
 });
 
 // Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Server running on the port ${PORT}`);
 });
